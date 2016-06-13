@@ -1,0 +1,102 @@
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- //-beg- concat_js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+
+    <script src="app.js"></script>
+    <!-- //-end- concat_js -->
+</head>
+<body ng-controller="frontController">
+
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="navbar-header">
+                        <img src="img/thumb.JPG"/>
+                        <h5>
+                            Your full name
+                        </h5>
+                        <h6>
+                            Your title
+                        </h6>
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item {{classForTab('about')}}">
+                                <a href="#about" title="About">About</a>
+                            </li>
+                            <li class="nav-item {{classForTab('resume')}}">
+                                <a href="#resume" title="Resume">Resume</a>
+                            </li>
+                            <li class="nav-item {{classForTab('bookshelf')}}">
+                                <a class="nav-link" href="#bookshelf">Bookshelf</a>
+                            </li>
+                            <li class="nav-item {{classForTab('office')}}">
+                                <a class="nav-link" href="#office">Office</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" title="Blog">Blog <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/your_id"><i class="fa fa-github"></i> Github</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://twitter.com/your_id"><i class="fa fa-twitter-square"></i> Twitter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/your_id"><i class="fa fa-instagram"></i> Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div ng-view></div>
+        </div>
+    </section>
+</body>
+</html>
+
