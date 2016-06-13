@@ -1,0 +1,33 @@
+{
+  "name": "angular-minimalistic-homepage",
+  "description": "Angular Minimalistic Home Page",
+  "main": "index.html",
+  "authors": [
+    "Lukasz Dembinski <dembol@devesion.com>"
+  ],
+  "license": {
+    "type": "MIT"
+  },
+  "keywords": [
+    "Minimalistic",
+    "Homepage"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+    "dependencies": {
+        "jquery": "2.2.3",
+        "angular": "~1.4.8",
+        "angular-route": "~1.4.8",
+        "angular-bootstrap": "~0.13.3",
+        "angular-translate": "~2.7.2",
+        "angular-translate-loader-static-files": "~2.7.2",
+        "angular-resource": "~1.4.4",
+        "bootstrap": "v3.3.6",
+        "bootstrap-material-design": "0.5.10",
+        "font-awesome": "~4.5.0"
+    }
+}
