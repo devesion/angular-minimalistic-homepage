@@ -2,7 +2,9 @@
 
 var app = angular.module('myApp', [
     'ngRoute',
-    'ngResource'
+    'ngResource',
+    'myApp.config',
+    'myApp.components.menu'
 ]);
 
 app.config(function ($routeProvider) {
@@ -17,16 +19,19 @@ app.config(function ($routeProvider) {
     }).otherwise('/about')
 });
 
-app.controller("frontController", function($scope, $window, $location, $log) {
-    $scope.message = "message1";
-    $scope.activePath = "";
+app.controller("headController", function($scope, configService) {
+    $scope.config = configService;
+});
 
+app.controller("frontController", function($scope, $location, configService) {
+    $scope.config = configService;
+
+    $scope.activePath = "";
     $scope.$on( "$routeChangeStart", function(event, next, current) {
         $scope.activePath = $location.path().substr(1);
     });
 
     $scope.classForTab = function(tabName) {
-        $log.info(tabName + " " + $scope.activePath);
         if (tabName == $scope.activePath) {
             return "active";
         }

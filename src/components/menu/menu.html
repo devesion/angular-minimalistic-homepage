@@ -1,0 +1,51 @@
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="menuController">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <div class="navbar-header">
+                    <img ng-src="{{config.userThumb}}"/>
+                    <h5>
+                        {{config.userName}}
+                    </h5>
+                    <h6>
+                        {{config.userTitle}}
+                    </h6>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item {{classForTab('about')}}">
+                            <a href="#about" title="About">About</a>
+                        </li>
+                        <li class="nav-item {{classForTab('resume')}}">
+                            <a href="#resume" title="Resume">Resume</a>
+                        </li>
+                        <li class="nav-item {{classForTab('bookshelf')}}">
+                            <a class="nav-link" href="#bookshelf">Bookshelf</a>
+                        </li>
+                        <li class="nav-item {{classForTab('office')}}">
+                            <a class="nav-link" href="#office">Office</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" title="Blog">Blog <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/your_id"><i class="fa fa-github"></i> Github</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://twitter.com/your_id"><i class="fa fa-twitter-square"></i> Twitter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/your_id"><i class="fa fa-instagram"></i> Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

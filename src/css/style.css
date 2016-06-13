@@ -1,41 +1,19 @@
-body {
-    font-family: "Roboto Condensed", sans-serif;
-    background-color: #fdfdfd;
-}
-
 h3 {
-    font-family: "Roboto Condensed", sans-serif;
-    color: #ab47bc;
     font-weight: 200;
     font-size: 2em;
 }
 
 h5 {
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 1.5em;
-    color: #ce93d8;
 }
 
 h6 {
-    font-family: "Roboto Condensed", sans-serif;
     font-size: 1.1em;
-}
-
-.text-info {
-    color: #76ff03 !important;
-}
-
-.text-primary {
-    color: #f8f8f8 !important;
 }
 
 .navbar {
     padding: 0;
     height: 90px;
-}
-
-.navbar.navbar {
-    background-color: #212121;
 }
 
 .navbar-header {
@@ -64,12 +42,6 @@ h6 {
     height: 3px;
     z-index: 1;
     display: block;
-    background-color: #ffffff;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 .navbar-nav > li.active a {
@@ -87,12 +59,6 @@ h6 {
     z-index: 1;
     bottom: -10px;
     display: block;
-    background-color: #ffffff;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 section {
