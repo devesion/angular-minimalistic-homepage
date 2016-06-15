@@ -19,29 +19,12 @@
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item {{classForTab('about')}}">
-                            <a href="#about" title="About">About</a>
-                        </li>
-                        <li class="nav-item {{classForTab('resume')}}">
-                            <a href="#resume" title="Resume">Resume</a>
-                        </li>
-                        <li class="nav-item {{classForTab('bookshelf')}}">
-                            <a class="nav-link" href="#bookshelf">Bookshelf</a>
-                        </li>
-                        <li class="nav-item {{classForTab('office')}}">
-                            <a class="nav-link" href="#office">Office</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" title="Blog">Blog <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/your_id"><i class="fa fa-github"></i> Github</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://twitter.com/your_id"><i class="fa fa-twitter-square"></i> Twitter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.instagram.com/your_id"><i class="fa fa-instagram"></i> Instagram</a>
+                        <li ng-repeat="menuTab in menuTabs()" class="nav-item {{classForTab(menuTab.href)}}">
+                            <a href="{{menuTab.href}}" title="{{menuTab.name}}">
+                                <i ng-show="menuTab.preNameFa != null" class="fa {{menuTab.preNameFa}}"/>
+                                {{menuTab.name}}
+                                <i ng-show="menuTab.postNameFa != null" class="fa {{menuTab.postNameFa}}"/>
+                            </a>
                         </li>
                     </ul>
                 </div>
