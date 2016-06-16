@@ -7,16 +7,37 @@ var app = angular.module('myApp', [
     'myApp.components.menu'
 ]);
 
-app.config(function ($routeProvider) {
-	$routeProvider.when('/about', {
-        templateUrl: 'views/about/main.html'
-    }).when('/resume', {
-    	templateUrl: 'views/resume/main.html'
-    }).when('/bookshelf', {
-        templateUrl: 'views/bookshelf/main.html'
-    }).when('/office', {
-        templateUrl: 'views/office/main.html'
-    }).otherwise('/about')
+app.config(function ($routeProvider, configServiceProvider) {
+    var routeHrefPrefix = '#';
+    var routePathPrefix = '/';
+    var viewsDirectory = 'views';
+    var viewFile = 'main.html';
+
+    var menu = configServiceProvider.$get().menu;
+    for (var i in menu) {
+        var menuItem = menu[i];
+        extractRouteFromMenu(menuItem);
+    }
+
+    function extractRouteFromMenu(menuItem) {
+        var href = menuItem.href;
+
+        if (hrefIsRoutePath(href)) {
+            var viewName = href.substr(1);
+            var routePath = routePathPrefix + viewName;
+            addRouteToProvider(routePath, viewName);
+        }
+    }
+
+    function hrefIsRoutePath(href) {
+        return href.indexOf(routeHrefPrefix) == 0;
+    }
+
+    function addRouteToProvider(routePath, viewName) {
+        $routeProvider.when(routePath, {
+            templateUrl: viewsDirectory + '/' + viewName + '/' + viewFile
+        });
+    }
 });
 
 app.controller("headController", function($scope, configService) {
