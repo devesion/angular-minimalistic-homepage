@@ -9,9 +9,10 @@ This is minimalistic homepage template built on top of AngularJS. It is my side 
 ### Installation
 
 There are a couple of steps to build your personal minimalistic homepage:
-* [github] fork my project into your github account
+* fork my project into your github account
 * git clone [YOUR REPOSITORY]
 * git remote add upstream https://github.com/devesion/angular-minimalistic-homepage.git
+* configure your homepage - see [Configuration](#Configuration)
 * ./build.sh
 
 ### Fetching and merging changes from upstream project
@@ -19,6 +20,12 @@ There are a couple of steps to build your personal minimalistic homepage:
 * git merge upstream/master
 
 ### Configuration
+
+Just before building you should configure your homepage. To do it you need to alter two files:
+
+#### src/css/style-theme.less
+
+#### src/config.js
 
 ### Demo
 
