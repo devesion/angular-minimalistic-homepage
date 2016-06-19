@@ -1,11 +1,19 @@
 @mainFont: "Roboto Condensed";
 @backgroundColor: #fdfdfd;
 @menuBackgroundColor: #212121;
-@menuLinksColor: #d0d0d0;
-@menuUserNameColor: #ab47bc;
-@menuUserTitleColor: #d0d0d0;
-@primaryColor: #212121;
+@menuLinkColor: #d0d0d0;
+@menuUserNameTextColor: #ab47bc;
+@menuUserNameTextSize: 1.8em;
+@menuUserTitleTextColor: #d0d0d0;
+@menuUserTitleTextSize: 1.2em;
+@footerBackgroundColor: #212121;
+@footerLinkColor: #ab47bc;
+@footerTextColor: #d0d0d0;
+@footerTextSize: 1.3em;
+@pageTextSize: 1.3em;
 @pageHeaderColor: #ab47bc;
+@primaryColor: #212121;
+@primaryLinkColor: #ab47bc;
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,latin-ext");
 
@@ -14,30 +22,46 @@ body {
     font-family: @mainFont, sans-serif;
 }
 
-.navbar, .navbar.navbar-default {
+.navbar-menu, .navbar.navbar-default {
     background-color: @menuBackgroundColor;
 }
 
-.navbar .navbar-nav>li>a {
-    color: @menuLinksColor;
+.navbar-menu .navbar-nav>li>a {
+    color: @menuLinkColor;
 }
 
-.navbar-nav > li:hover:before, .navbar-nav > li.active:before {
-    background-color: @menuLinksColor;
+.navbar-menu > li:hover:before, .navbar-nav > li.active:before {
+    background-color: @menuLinkColor;
 }
 
-.navbar-nav > li:hover:after, .navbar-nav > li.active:after {
-    background-color: @menuLinksColor;
+.navbar-menu > li:hover:after, .navbar-nav > li.active:after {
+    background-color: @menuLinkColor;
 }
 
-.navbar h5 {
-    color: @menuUserNameColor;
+.navbar-menu h5 {
+    color: @menuUserNameTextColor;
     font-family: @mainFont, sans-serif;
+    font-size: @menuUserNameTextSize;
 }
 
-.navbar h6 {
-    color: @menuUserTitleColor;
+.navbar-menu h6 {
+    color: @menuUserTitleTextColor;
     font-family: @mainFont, sans-serif;
+    font-size: @menuUserTitleTextSize;
+}
+
+.navbar-footer {
+    background-color: @footerBackgroundColor;
+    font-size: @footerTextSize;
+}
+
+.navbar-footer a {
+    color: @footerLinkColor;
+    font-weight: 400;
+}
+
+.page-container {
+    font-size: @pageTextSize;
 }
 
 .page-container h3 {

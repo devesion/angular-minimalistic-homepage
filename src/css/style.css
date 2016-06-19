@@ -11,7 +11,7 @@ h6 {
     font-size: 1.1em;
 }
 
-.navbar {
+.navbar-menu {
     padding: 0;
     height: 90px;
 }
@@ -63,4 +63,9 @@ h6 {
 
 section {
     margin-top: 100px;
+}
+
+.navbar-footer {
+    padding-top: 10px;
+    height: 20px;
 }

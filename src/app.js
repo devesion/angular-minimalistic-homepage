@@ -4,7 +4,8 @@ var app = angular.module('myApp', [
     'ngRoute',
     'ngResource',
     'myApp.config',
-    'myApp.components.menu'
+    'myApp.components.menu',
+    'myApp.components.footer'
 ]);
 
 app.config(function ($routeProvider, configServiceProvider) {
