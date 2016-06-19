@@ -1,6 +1,6 @@
 # angular-minimalistic-homepage
 
-This is minimalistic homepage template built on top of AngularJS. It is my side project and I did it for my personal purposes but maybe it'll be useful for others. So feel free to use it, hack it and contribute by forking, opening issues, making pull requests.
+This is minimalistic homepage template built on top of AngularJS. This is my side project and I did it for my personal purposes but maybe it'll be useful for others. So feel free to use it, hack it and contribute by forking, opening issues, making pull requests.
 
 ### Requisites
 * bower installed (tested on 1.7.9)
@@ -21,7 +21,7 @@ There are a couple of steps to build your personal minimalistic homepage:
 
 ### Configuration
 
-Just before building you should configure your homepage. To do it you need to alter two files:
+Just before running ./build.sh you should configure your homepage. To do it you need to alter two files:
 
 #### src/css/style-theme.less
 Change the following less variables as you want. The names are self-descriptive so I won't comment them. When it comes to setting fonts you must edit both @mainFont and @import due to lessc limitations.
